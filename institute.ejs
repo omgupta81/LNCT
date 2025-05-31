@@ -1,0 +1,29 @@
+<% layout("/layouts/boilerplate") -%>
+
+
+<div
+  class="row row-cols-xxl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 mt-3"
+>
+
+  <% for(let insti of allinstitutes) { %>
+  <div class="card listing-card col">
+    <a href="/institutes/<%= insti._id %>" class="listing-link">
+      <img
+        src="<%= insti.image %>"
+        class="card-img-top"
+        alt="listing image"
+        style="height: 20rem"
+      />
+      <div class="card-img-overlay"></div>
+      <div class="card-body">
+        <p class="card-text">
+          <b> <%= insti.name %> </b><br />
+           <%= insti.description %> <br/>
+          &#8377; <%=insti.package %> <br />
+           <%= insti.students %>
+        </p>
+      </div>
+    </a>
+  </div>
+  <% } %>
+</div>

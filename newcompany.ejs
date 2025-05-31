@@ -1,0 +1,81 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+    
+      <h3>add new company</h3>
+      <form
+        method="POST"
+        action="/companys"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label">Name</label>
+          <input
+            name="company[title]"
+            placeholder="Add Name"
+            type="text"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">name looks good !</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="company[description]"
+            placeholder="enter description"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+
+        
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload Listing Imagek</label>
+          <input
+            name="company[image]"
+            type="file"
+            class="form-control"
+            required
+          />
+        </div>
+
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Package</label>
+            <input
+              name="company[package]"
+              placeholder="500000"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Please enter package</div>
+          </div>
+          
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">placed students</label>
+            <input
+              name="company[students]"
+              placeholder=
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Please enter no of placed students</div>
+          </div>
+
+         
+
+        
+        <button class="btn btn-dark edit-btn">Add</button><br /><br />
+      </form>
+    </div>
+  </div>
+</body>
